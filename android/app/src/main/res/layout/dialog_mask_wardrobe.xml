@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wardrobe_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/clay_sheet_cream"
+    android:paddingStart="@dimen/space_lg"
+    android:paddingTop="@dimen/space_lg"
+    android:paddingEnd="@dimen/space_lg"
+    android:paddingBottom="@dimen/nav_bar_inset">
+
+    <View
+        android:id="@+id/wardrobe_grab"
+        android:layout_width="@dimen/menu_grab_width"
+        android:layout_height="@dimen/menu_grab_height"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/grab_bar_handle"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/wardrobe_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wardrobe_grab"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/space_md"
+        android:text="@string/wardrobe_title"
+        android:textAppearance="@style/TextAppearance.App.Headline"
+        android:textSize="22sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/wardrobe_close"
+        style="@style/Widget.App.Button.Icon"
+        android:layout_width="@dimen/touch_target"
+        android:layout_height="@dimen/touch_target"
+        android:layout_below="@id/wardrobe_grab"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/space_xs"
+        android:contentDescription="@string/cd_close"
+        app:backgroundTint="@color/surface_lilac"
+        app:icon="@drawable/ic_close"
+        app:iconTint="@color/primary_purple" />
+
+    <TextView
+        android:id="@+id/wardrobe_empty_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wardrobe_close"
+        android:layout_marginTop="@dimen/space_sm"
+        android:text="@string/wardrobe_empty_hint"
+        android:textAppearance="@style/TextAppearance.App.Body"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/wardrobe_shard_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wardrobe_empty_hint"
+        android:layout_marginTop="@dimen/space_xs"
+        android:accessibilityLiveRegion="polite"
+        android:text="@string/wardrobe_title"
+        android:textAppearance="@style/TextAppearance.App.Label"
+        android:textColor="@color/primary_purple" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wardrobe_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/wardrobe_shard_total"
+        android:layout_marginTop="@dimen/space_sm"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/space_md" />
+
+</RelativeLayout>

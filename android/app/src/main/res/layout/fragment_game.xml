@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_night">
+
+    <ImageView
+        android:id="@+id/game_backdrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.55"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/game_dim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/overlay_game_dim"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/game_btn_back"
+        style="@style/Widget.App.Button.Icon"
+        android:layout_width="@dimen/touch_target"
+        android:layout_height="@dimen/touch_target"
+        android:layout_marginStart="@dimen/space_md"
+        android:layout_marginTop="@dimen/status_bar_inset"
+        android:contentDescription="@string/cd_back_to_map"
+        app:icon="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.royaltrickster.quest.core.ui.HeartsBarView
+        android:id="@+id/game_hearts"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/touch_target"
+        android:layout_marginTop="@dimen/status_bar_inset"
+        android:layout_marginEnd="@dimen/space_md"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/game_quest_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_xs"
+        android:layout_marginEnd="@dimen/space_xs"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:letterSpacing="0.14"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="#F0DCF7"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/game_hearts"
+        app:layout_constraintStart_toEndOf="@id/game_btn_back"
+        app:layout_constraintTop_toTopOf="@id/game_btn_back" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/game_quest_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:accessibilityLiveRegion="polite"
+        app:indicatorColor="@color/secondary_gold"
+        app:layout_constraintEnd_toEndOf="@id/game_quest_label"
+        app:layout_constraintStart_toStartOf="@id/game_quest_label"
+        app:layout_constraintTop_toBottomOf="@id/game_quest_label"
+        app:trackColor="#33FFF1E1"
+        app:trackCornerRadius="3dp"
+        app:trackThickness="@dimen/game_progress_height" />
+
+    <com.royaltrickster.quest.core.ui.LaneRunnerView
+        android:id="@+id/game_board"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_sm"
+        android:contentDescription="@string/cd_lane_board"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_btn_back" />
+
+    <View
+        android:id="@+id/game_flash"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="@drawable/collision_flash"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/game_combo_ribbon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/combo_ribbon_bg"
+        android:letterSpacing="0.08"
+        android:paddingStart="@dimen/space_md"
+        android:paddingTop="@dimen/space_xs"
+        android:paddingEnd="@dimen/space_md"
+        android:paddingBottom="@dimen/space_xs"
+        android:text="@string/app_name"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_quest_progress"
+        android:layout_marginTop="@dimen/space_md" />
+
+    <TextView
+        android:id="@+id/game_pickup_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_pickup_crown"
+        android:textColor="@color/secondary_gold"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/game_board"
+        app:layout_constraintEnd_toEndOf="@id/game_board"
+        app:layout_constraintStart_toStartOf="@id/game_board"
+        app:layout_constraintTop_toTopOf="@id/game_board"
+        app:layout_constraintVertical_bias="0.58" />
+
+    <TextView
+        android:id="@+id/game_countdown"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/countdown_bg"
+        android:gravity="center"
+        android:textColor="@color/text_on_dark"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/game_board"
+        app:layout_constraintEnd_toEndOf="@id/game_board"
+        app:layout_constraintStart_toStartOf="@id/game_board"
+        app:layout_constraintTop_toTopOf="@id/game_board"
+        app:layout_constraintVertical_bias="0.40" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/game_control_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/game_control_bar_height"
+        android:layout_marginStart="@dimen/game_control_bar_margin"
+        android:layout_marginEnd="@dimen/game_control_bar_margin"
+        android:layout_marginBottom="@dimen/nav_bar_inset"
+        app:cardBackgroundColor="@color/scrim_sheet"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="@dimen/elevation_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/stroke_gold_soft"
+        app:strokeWidth="@dimen/stroke_clay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/space_lg"
+            android:paddingEnd="@dimen/space_lg">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_btn_left"
+                style="@style/Widget.App.Button.Control"
+                android:layout_width="@dimen/button_control_width"
+                android:layout_height="@dimen/button_control_height"
+                android:contentDescription="@string/cd_lane_left"
+                app:icon="@drawable/ic_lane_left" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_btn_jump"
+                style="@style/Widget.App.Button.Jump"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_control_height"
+                android:layout_marginStart="@dimen/space_sm"
+                android:layout_marginEnd="@dimen/space_sm"
+                android:layout_weight="1"
+                android:text="@string/game_btn_jump" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_btn_right"
+                style="@style/Widget.App.Button.Control"
+                android:layout_width="@dimen/button_control_width"
+                android:layout_height="@dimen/button_control_height"
+                android:contentDescription="@string/cd_lane_right"
+                app:icon="@drawable/ic_lane_right" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.royaltrickster.quest.core.ui.CooldownRingView
+        android:id="@+id/game_ability_ring"
+        android:layout_width="@dimen/button_ability_size"
+        android:layout_height="@dimen/button_ability_size"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/game_ability_button"
+        app:layout_constraintEnd_toEndOf="@id/game_ability_button"
+        app:layout_constraintStart_toStartOf="@id/game_ability_button"
+        app:layout_constraintTop_toTopOf="@id/game_ability_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/game_ability_button"
+        style="@style/Widget.App.Button.Icon"
+        android:layout_width="@dimen/button_ability_size"
+        android:layout_height="@dimen/button_ability_size"
+        android:layout_marginEnd="@dimen/space_xl"
+        android:contentDescription="@string/cd_ability"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/ic_mask"
+        app:layout_constraintBottom_toTopOf="@id/game_control_bar"
+        app:layout_constraintEnd_toEndOf="@id/game_control_bar"
+        app:layout_constraintTop_toTopOf="@id/game_control_bar" />
+
+    <TextView
+        android:id="@+id/game_ability_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_xl"
+        android:accessibilityLiveRegion="polite"
+        android:letterSpacing="0.14"
+        android:text="@string/game_ability_ready"
+        android:textColor="@color/text_on_dark_secondary"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@id/game_control_bar"
+        app:layout_constraintStart_toStartOf="@id/game_control_bar"
+        app:layout_constraintTop_toTopOf="@id/game_control_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

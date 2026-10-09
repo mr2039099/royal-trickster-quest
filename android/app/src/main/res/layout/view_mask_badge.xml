@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/badge_icon"
+        android:layout_width="@dimen/mask_badge_icon"
+        android:layout_height="@dimen/mask_badge_icon"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/cd_mask_icon"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_trickster_mask" />
+
+    <TextView
+        android:id="@+id/badge_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/space_xs"
+        android:maxLines="1"
+        android:text="@string/wardrobe_title"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</merge>

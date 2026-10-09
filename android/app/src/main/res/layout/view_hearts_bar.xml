@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/heart_one"
+        android:layout_width="@dimen/heart_size"
+        android:layout_height="@dimen/heart_size"
+        android:layout_gravity="center_vertical"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_heart"
+        app:tint="@color/accent_red" />
+
+    <ImageView
+        android:id="@+id/heart_two"
+        android:layout_width="@dimen/heart_size"
+        android:layout_height="@dimen/heart_size"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/space_xxs"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_heart"
+        app:tint="@color/accent_red" />
+
+    <ImageView
+        android:id="@+id/heart_three"
+        android:layout_width="@dimen/heart_size"
+        android:layout_height="@dimen/heart_size"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/space_xxs"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_heart"
+        app:tint="@color/accent_red" />
+
+</merge>

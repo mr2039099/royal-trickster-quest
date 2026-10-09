@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Royal Trickster Quest</string>
+
+    <string name="splash_title_line_one">ROYAL TRICKSTER</string>
+    <string name="splash_title_line_two">QUEST</string>
+    <string name="splash_subtitle">MASKS - PARADE - MISCHIEF</string>
+    <string name="splash_loading">LOADING THE PARADE</string>
+
+    <string name="menu_title">PALACE QUEST MAP</string>
+    <string name="menu_tagline">Run the parade, dodge the props, collect every mask.</string>
+    <string name="menu_hint_first_run">Your first quest awaits</string>
+    <string name="menu_progress_reset">Progress reset - starting a fresh parade.</string>
+    <string name="menu_cta_play">PLAY QUEST</string>
+    <string name="menu_btn_masks">MASKS</string>
+    <string name="menu_btn_settings">SETTINGS</string>
+    <string name="menu_stat_crowns">CROWNS</string>
+    <string name="chip_quest_number">QUEST %1$d</string>
+    <string name="menu_stat_masks">MASKS</string>
+
+    <string name="game_btn_jump">JUMP</string>
+    <string name="game_quest_label">QUEST %1$d - %2$s</string>
+    <string name="game_countdown_go">GO</string>
+    <string name="game_combo_ribbon">COMBO x%1$d</string>
+    <string name="game_pickup_crown">+1</string>
+    <string name="game_ability_ready">ABILITY READY</string>
+    <string name="game_ability_active">%1$s ACTIVE</string>
+    <string name="game_ability_charging">ABILITY CHARGING</string>
+
+    <string name="result_title_win">QUEST COMPLETE</string>
+    <string name="result_title_loss">QUEST FAILED</string>
+    <string name="result_cta_again">PLAY AGAIN</string>
+    <string name="result_cta_menu">MENU</string>
+    <string name="result_stat_crowns">CROWNS</string>
+    <string name="result_stat_distance">DISTANCE</string>
+    <string name="result_stat_combo">BEST COMBO</string>
+    <string name="result_stat_shards">SHARDS</string>
+    <string name="result_summary_line">A short parade this time - %1$d crowns over %2$s.</string>
+    <string name="result_new_mask">NEW MASK: %1$s</string>
+    <string name="result_distance_format">%1$s m</string>
+    <string name="result_combo_format">x%1$d</string>
+
+    <string name="wardrobe_title">MASK WARDROBE</string>
+    <string name="wardrobe_empty_hint">Collect mask shards during a run to unlock costumes.</string>
+    <string name="wardrobe_equip">EQUIP</string>
+    <string name="wardrobe_equipped">EQUIPPED</string>
+    <string name="wardrobe_shard_progress">%1$d / %2$d SHARDS</string>
+    <string name="wardrobe_locked_state">Locked, %1$d shards remaining</string>
+    <string name="wardrobe_equipped_state">Equipped</string>
+    <string name="wardrobe_ability_none">Baseline run, no ability</string>
+
+    <string name="settings_title">SETTINGS</string>
+    <string name="settings_sound">Sound effects</string>
+    <string name="settings_haptics">Haptic feedback</string>
+    <string name="settings_reduced_motion">Reduced motion</string>
+    <string name="settings_difficulty">Difficulty</string>
+    <string name="settings_difficulty_easy">EASY</string>
+    <string name="settings_difficulty_royal">ROYAL</string>
+    <string name="settings_difficulty_jester">JESTER</string>
+    <string name="settings_reset">RESET PROGRESS</string>
+    <string name="settings_reset_title">Reset all crowns, shards and masks?</string>
+    <string name="settings_reset_confirm">RESET</string>
+    <string name="settings_reset_cancel">CANCEL</string>
+    <string name="settings_economy_note">Crowns and shards are in-game items with no real-world value.</string>
+    <string name="settings_state_on">On</string>
+    <string name="settings_state_off">Off</string>
+
+    <string name="cd_palace_hall">Palace parade hall with velvet drapes and gold trim</string>
+    <string name="cd_trickster_hero">Masked trickster leaping over the parade carpet</string>
+    <string name="cd_trickster_mask">Jester mask wearing a gold crown</string>
+    <string name="cd_crown_counter">Crowns collected</string>
+    <string name="cd_back_to_map">Back to the quest map</string>
+    <string name="cd_lane_left">Move one lane left</string>
+    <string name="cd_lane_right">Move one lane right</string>
+    <string name="cd_ability">Use the equipped mask ability</string>
+    <string name="cd_close">Close</string>
+    <string name="cd_hearts">Lives remaining</string>
+    <string name="cd_lane_board">Parade corridor run board</string>
+    <string name="cd_result_crown">Gold crown trophy</string>
+    <string name="cd_mask_icon">Mask icon</string>
+    <string name="state_lives_left">%1$d lives left</string>
+    <string name="state_jump_ready">Jump ready</string>
+    <string name="state_jump_recharging">Jump recharging</string>
+    <string name="state_ability_recharging">Ability recharging</string>
+</resources>

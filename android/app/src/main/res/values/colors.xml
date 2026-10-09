@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_cream">#FFF1E1</color>
+    <color name="surface_white">#FFFFFFFF</color>
+    <color name="surface_sand">#F8E6CE</color>
+    <color name="surface_lilac">#F3EAF6</color>
+    <color name="primary_purple">#7428A4</color>
+    <color name="primary_velvet">#4A1668</color>
+    <color name="primary_night">#2A0B44</color>
+    <color name="accent_red">#C6283D</color>
+    <color name="secondary_gold">#F5C84C</color>
+    <color name="text_primary">#2C1A31</color>
+    <color name="text_secondary">#6B4E78</color>
+    <color name="text_muted">#9A86A4</color>
+    <color name="text_on_dark">#FFF1E1</color>
+    <color name="text_on_dark_secondary">#D9BFE3</color>
+
+    <color name="clay_highlight">#33FFFFFF</color>
+    <color name="clay_shadow">#4D2A0B44</color>
+    <color name="stroke_purple_soft">#1A7428A4</color>
+    <color name="stroke_gold_soft">#33F5C84C</color>
+    <color name="stroke_cream_soft">#66FFF1E1</color>
+    <color name="ripple_light">#33FFF1E1</color>
+    <color name="ripple_purple">#1F7428A4</color>
+    <color name="scrim_sheet">#CC2A0B44</color>
+    <color name="scrim_card">#F2FFFFFF</color>
+    <color name="scrim_header">#CCFFFFFF</color>
+    <color name="grab_bar">#1F2C1A31</color>
+    <color name="lane_separator">#33FFF1E1</color>
+    <color name="transparent">#00000000</color>
+</resources>

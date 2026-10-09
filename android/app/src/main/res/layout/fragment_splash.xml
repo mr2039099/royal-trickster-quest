@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient">
+
+    <ImageView
+        android:id="@+id/splash_backdrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.45"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_splash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/splash_scrim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/overlay_splash_scrim"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/confetti_one"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="36dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_confetti_diamond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/secondary_gold" />
+
+    <ImageView
+        android:id="@+id/confetti_two"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="48dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_confetti_diamond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.10"
+        app:tint="@color/accent_red" />
+
+    <ImageView
+        android:id="@+id/confetti_three"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="72dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_confetti_diamond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.32"
+        app:tint="@color/text_on_dark_secondary" />
+
+    <ImageView
+        android:id="@+id/confetti_four"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="30dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_confetti_diamond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.37"
+        app:tint="@color/secondary_gold" />
+
+    <ImageView
+        android:id="@+id/confetti_five"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="24dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_confetti_diamond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.52"
+        app:tint="@color/secondary_gold" />
+
+    <ImageView
+        android:id="@+id/confetti_six"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="64dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_confetti_diamond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.56"
+        app:tint="@color/accent_red" />
+
+    <View
+        android:id="@+id/splash_disc"
+        android:layout_width="@dimen/splash_disc_size"
+        android:layout_height="@dimen/splash_disc_size"
+        android:background="@drawable/clay_disc_primary"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.30" />
+
+    <ImageView
+        android:id="@+id/splash_mask"
+        android:layout_width="@dimen/splash_mask_size"
+        android:layout_height="@dimen/splash_mask_size"
+        android:contentDescription="@string/cd_trickster_mask"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_trickster_mask"
+        app:layout_constraintBottom_toBottomOf="@id/splash_disc"
+        app:layout_constraintEnd_toEndOf="@id/splash_disc"
+        app:layout_constraintStart_toStartOf="@id/splash_disc"
+        app:layout_constraintTop_toTopOf="@id/splash_disc" />
+
+    <TextView
+        android:id="@+id/splash_title_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xxl"
+        android:shadowColor="#662A0B44"
+        android:shadowDx="0"
+        android:shadowDy="3"
+        android:shadowRadius="8"
+        android:text="@string/splash_title_line_one"
+        android:textAppearance="@style/TextAppearance.App.Display"
+        android:textColor="@color/text_on_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_disc" />
+
+    <TextView
+        android:id="@+id/splash_title_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#662A0B44"
+        android:shadowDx="0"
+        android:shadowDy="3"
+        android:shadowRadius="8"
+        android:text="@string/splash_title_line_two"
+        android:textAppearance="@style/TextAppearance.App.Display"
+        android:textColor="@color/secondary_gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_title_one" />
+
+    <TextView
+        android:id="@+id/splash_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:letterSpacing="0.22"
+        android:text="@string/splash_subtitle"
+        android:textAllCaps="true"
+        android:textColor="@color/text_on_dark_secondary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_title_two" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/splash_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_md"
+        android:indeterminate="true"
+        app:indicatorColor="@color/secondary_gold"
+        app:indicatorSize="@dimen/splash_indicator_size"
+        app:layout_constraintBottom_toTopOf="@id/splash_loading_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="#33FFF1E1"
+        app:trackThickness="@dimen/splash_indicator_track" />
+
+    <TextView
+        android:id="@+id/splash_loading_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:accessibilityLiveRegion="polite"
+        android:letterSpacing="0.18"
+        android:text="@string/splash_loading"
+        android:textAllCaps="true"
+        android:textColor="#B79CC4"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
